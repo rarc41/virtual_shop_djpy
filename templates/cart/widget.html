@@ -48,7 +48,7 @@
     <tfoot>
         <tr>
             <td colspan="3">
-                Total: {{ cart_total_amount|money_format:"€" }}
+                Total: {{ cart_total_amount|money_format:"$" }}
             </td>
         </tr>
         {% if request.session.cart.items %}
