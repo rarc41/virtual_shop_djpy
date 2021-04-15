@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     # Mis aplicaciones
     'autenticacion',
     'products',
-    'cart'
+    'cart',
 ]
 
 MIDDLEWARE = [
