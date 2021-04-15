@@ -52,11 +52,13 @@
             </td>
         </tr>
         {% if request.session.cart.items %}
+            {% comment %}
             <tr>
                 <td colspan="3">
                     <a href="{% url "process_order" %}" class="btn btn-success">Crear pedido</a>
                 </td>
             </tr>
+            {% endcomment %}
         {% endif %}
     </tfoot>
 </table>
