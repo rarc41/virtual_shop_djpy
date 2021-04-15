@@ -22,7 +22,7 @@ def acceder(request):
             messages.error(request, F"Los datos son incorrectos")
 
     form = AuthenticationForm()
-    return render(request, "autenticacion/acceder", {"form": form})
+    return render(request, "autenticacion/acceder.html", {"form": form})
 
 
 class VistaRegistro(View):

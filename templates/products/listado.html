@@ -1,1 +1,26 @@
 {%  extends 'layouts/tienda.html' %}
+
+{% block title %}Tienda{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-9">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-md-3 col-sm-12 col-lg-4">
+                        <div class="card" style="width: 100%">
+                            <img src="{{ product.image.url }}" style="width: 100%;" class="card-img-top" alt="{{ product.name }}" />
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.excerpt }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-3">
+
+        </div>
+    </div>
+{% endblock %}
