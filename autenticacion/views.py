@@ -3,6 +3,7 @@ from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
+from cart.cart import Cart
 
 
 def acceder(request):
@@ -28,6 +29,8 @@ def acceder(request):
 class VistaRegistro(View):
     # noinspection PyMethodMayBeStatic
     def get(self, request):
+        cart = Cart(request)
+        #cart.clear()
         form = UserCreationForm()
         return render(request, "autenticacion/registro.html", {"form": form})
 
